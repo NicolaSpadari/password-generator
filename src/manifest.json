@@ -1,0 +1,32 @@
+{
+    "name": "Password generator",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "Generate a random password",
+    "author": "Nicola Spadari",
+    "action": {
+        "default_icon": {
+            "16": "assets/logo-16.png",
+            "48": "assets/logo-48.png",
+            "128": "assets/logo-128.png"
+        },
+        "default_title": "Password generator"
+    },
+    "icons": {
+        "16": "assets/logo-16.png",
+        "48": "assets/logo-48.png",
+        "128": "assets/logo-128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content-scripts/main.js"],
+            "all_frames": true,
+            "match_about_blank": true
+        }
+    ],
+    "permissions": ["tabs", "contextMenus"]
+}
