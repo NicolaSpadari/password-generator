@@ -34,55 +34,57 @@
 </script>
 
 <style scoped lang="scss">
-	.form-group {
-		@apply relative mb-6;
-	}
-
-	.clay-range {
-		@apply pb-[0.1px];
-
-		&-title {
-			@apply block font-semibold leading-[1] mb-2 text-center;
+	#ns-password-generator {
+		.form-group {
+			@apply relative mb-6;
 		}
 
-		&-value {
-			@apply text-gray-400;
-		}
+		.clay-range {
+			@apply pb-[0.1px];
 
-		&-input {
-			@apply text-gray-400 block pb-[0.1px] relative align-middle w-full;
-
-			&:before,
-			&:after {
-				@apply text-sm leading-[1] font-semibold mt-10 absolute text-center top-0 w-6;
+			&-title {
+				@apply block font-semibold leading-[1] mb-2 text-center;
 			}
 
-			&:before {
-				content: attr(data-label-min);
-				@apply left-0;
-			}
-			&:after {
-				content: attr(data-label-max);
-				@apply right-0;
+			&-value {
+				@apply text-gray-400;
 			}
 
-			.form-control-range {
-				content: "1.5rem";
-				@apply bg-transparent appearance-none cursor-pointer h-10 m-0 p-0 relative z-1 block w-full;
-			}
+			&-input {
+				@apply text-gray-400 block pb-[0.1px] relative align-middle w-full;
 
-			.clay-range-track,
-			.clay-range-progress {
-				@apply rounded-[100px] h-1 -mt-0.5 absolute top-2/4 w-full;
-			}
-			.clay-range-track {
-				@apply bg-dark-600;
-			}
-			.clay-range-progress {
-				@apply bg-blue-600;
+				&:before,
+				&:after {
+					@apply text-sm leading-[1] font-semibold mt-10 absolute text-center top-0 w-6;
+				}
 
-				.clay-range-thumb {
-					@apply bg-dark-900 shadow-sm rounded-[100px] border-0 h-6 -mt-3 absolute top-2/4 w-6 invisible;
+				&:before {
+					content: attr(data-label-min);
+					@apply left-0;
+				}
+				&:after {
+					content: attr(data-label-max);
+					@apply right-0;
+				}
+
+				.form-control-range {
+					content: "1.5rem";
+					@apply bg-transparent appearance-none cursor-pointer h-10 m-0 p-0 relative z-1 block w-full;
+				}
+
+				.clay-range-track,
+				.clay-range-progress {
+					@apply rounded-[100px] h-1 -mt-0.5 absolute top-2/4 w-full;
+				}
+				.clay-range-track {
+					@apply bg-dark-600;
+				}
+				.clay-range-progress {
+					@apply bg-blue-600;
+
+					.clay-range-thumb {
+						@apply bg-dark-900 shadow-sm rounded-[100px] border-0 h-6 -mt-3 absolute top-2/4 w-6 invisible;
+					}
 				}
 			}
 		}

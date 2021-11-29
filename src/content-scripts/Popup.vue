@@ -252,89 +252,91 @@
 	});
 </script>
 
-<style>
-	.popup {
-		@apply transform min-w-md fixed top-5 right-5 rounded-lg shadow-lg bg-dark-800 py-8 px-10 z-99999;
-	}
+<style lang="scss">
+	#ns-password-generator {
+		.popup {
+			@apply transform min-w-md fixed top-5 right-5 rounded-lg shadow-lg bg-dark-800 py-8 px-10 z-99999;
+		}
 
-	.text-rainbow {
-		-webkit-animation: colorchange 7s infinite alternate;
-		@apply font-semibold;
-	}
+		.text-rainbow {
+			-webkit-animation: colorchange 7s infinite alternate;
+			@apply font-semibold;
+		}
 
-	.bg-rainbow {
-		-webkit-animation: bgcolorchange 7s infinite alternate;
-	}
+		.bg-rainbow {
+			-webkit-animation: bgcolorchange 7s infinite alternate;
+		}
 
-	@-webkit-keyframes colorchange {
-		0% {
-			@apply text-amber-400;
+		@-webkit-keyframes colorchange {
+			0% {
+				@apply text-amber-400;
+			}
+			10% {
+				@apply text-violet-500;
+			}
+			20% {
+				@apply text-teal-500;
+			}
+			30% {
+				@apply text-orange-400;
+			}
+			40% {
+				@apply text-red-500;
+			}
+			50% {
+				@apply text-blue-400;
+			}
+			60% {
+				@apply text-green-500;
+			}
+			70% {
+				@apply text-amber-500;
+			}
+			80% {
+				@apply text-pink-400;
+			}
+			90% {
+				@apply text-cyan-500;
+			}
+			100% {
+				@apply text-green-600;
+			}
 		}
-		10% {
-			@apply text-violet-500;
-		}
-		20% {
-			@apply text-teal-500;
-		}
-		30% {
-			@apply text-orange-400;
-		}
-		40% {
-			@apply text-red-500;
-		}
-		50% {
-			@apply text-blue-400;
-		}
-		60% {
-			@apply text-green-500;
-		}
-		70% {
-			@apply text-amber-500;
-		}
-		80% {
-			@apply text-pink-400;
-		}
-		90% {
-			@apply text-cyan-500;
-		}
-		100% {
-			@apply text-green-600;
-		}
-	}
 
-	@-webkit-keyframes bgcolorchange {
-		0% {
-			@apply bg-amber-400;
-		}
-		10% {
-			@apply bg-violet-500;
-		}
-		20% {
-			@apply bg-teal-500;
-		}
-		30% {
-			@apply bg-orange-400;
-		}
-		40% {
-			@apply bg-red-500;
-		}
-		50% {
-			@apply bg-blue-400;
-		}
-		60% {
-			@apply bg-green-500;
-		}
-		70% {
-			@apply bg-amber-500;
-		}
-		80% {
-			@apply bg-pink-400;
-		}
-		90% {
-			@apply bg-cyan-500;
-		}
-		100% {
-			@apply bg-green-600;
+		@-webkit-keyframes bgcolorchange {
+			0% {
+				@apply bg-amber-400;
+			}
+			10% {
+				@apply bg-violet-500;
+			}
+			20% {
+				@apply bg-teal-500;
+			}
+			30% {
+				@apply bg-orange-400;
+			}
+			40% {
+				@apply bg-red-500;
+			}
+			50% {
+				@apply bg-blue-400;
+			}
+			60% {
+				@apply bg-green-500;
+			}
+			70% {
+				@apply bg-amber-500;
+			}
+			80% {
+				@apply bg-pink-400;
+			}
+			90% {
+				@apply bg-cyan-500;
+			}
+			100% {
+				@apply bg-green-600;
+			}
 		}
 	}
 </style>
