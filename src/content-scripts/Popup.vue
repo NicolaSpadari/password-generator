@@ -181,22 +181,27 @@
 	};
 
 	const generatePassword = () => {
-		let pw = "";
+		let pw = "",
+			types = 0;
 
 		if (useUppercase.value) {
 			pw += getUppercaseLetter();
+			types++;
 		}
 
 		if (useLowercase.value) {
 			pw += getLowercaseLetter();
+			types++;
 		}
 
 		if (useNumbers.value) {
 			pw += getNumber();
+			types++;
 		}
 
 		if (useSymbols.value) {
 			pw += getSymbol();
+			types++;
 		}
 
 		for (let i = 0; i < passwordLength.value; i++) {
@@ -204,7 +209,7 @@
 			pw += x;
 		}
 
-		password.value = pw.substring(0, pw.length - 4);
+		password.value = pw.substring(0, pw.length - types);
 
 		checkPasswordStrength();
 	};
